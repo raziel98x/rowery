@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="manifest" href="./manifest.json">
+    <title>Rowery</title>
+  </head>
+  <body class="bg-light">
+    <div class="jumbotron bg-dark text-white">
+      <div class="container text-white">
+        <center><h1>Rodzaje rowerów</h1></center>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2 class="text-center">BMX</h2>
+          <img src="./bmx.jpg" alt="" class="img-thumbnail" />
+          <p>BMX (ang. bicycle motocross) – nazwa roweru i rodzaju kolarstwa, które zostało zapoczątkowane w USA w latach 70. XX wieku. Sport ten uprawia się na torach 
+		  ziemnych ze sztucznie przygotowanymi przeszkodami, z użyciem rowerów na kołach 20-calowych lub 24-calowych (cruiser), posiadających wzmocnioną i bardzo uproszczoną (bez przerzutek) konstrukcję. 
+		  Poza tym BMX-y mogą mieć dowolny typ konstrukcji, masę i geometrię. 
+		  Istnieją również mistrzostwa świata i puchar świata BMX (UCI BMX Supercross).
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h2 class="text-center">Tandem</h2>
+          <img
+            src="./tandem.jpg"
+            alt=""
+            class="img-thumbnail"
+          />
+          <p>
+          Tandem – rower przeznaczony dla dwóch lub więcej osób, siedzących w układzie jedna za drugą. 
+		  Typowy tandem ma, tak samo jak rower jednoosobowy, jedną ramę i dwa koła, za to każda z osób ma własne: kierownicę, siodełko i pedały. 
+		  Zdarzają się jednak także tandemy przeznaczone dla większej liczby osób. Udział w napędzaniu roweru mają obie osoby, natomiast kieruje rowerem zazwyczaj osoba z przodu, aczkolwiek spotykane są rowery specjalistyczne, 
+		  np. dla osoby dorosłej z dzieckiem, lub dla osoby niepełnosprawnej z opiekunem, gdzie można przełączać kierowanie rowerem, lub też tylko tylna osoba ma taką możliwość. 
+		  W każdym z tych przypadków osoba niekierująca wykorzystuje wtedy swoją kierownicę tylko jako oparcie dla rąk. 
+		  W podobny sposób mogą być również rozłączane lub przełączane układy napędu i hamowania.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h2 class="text-center">Rower miejski</h2>
+          <img
+            src="./miejski.jpg"
+            alt=""
+            class="img-thumbnail"
+          />
+          <p>
+            Tradycyjny rower miejski, tak zwany holender, zbudowany jest najczęściej na kołach 28-calowych (choć spotyka się również rowery z kołami 26- i 27-calowymi), posiada giętą, szeroką kierownicę, 
+			krótką ramę i szerokie siodełko umożliwiające jazdę w pozycji wyprostowanej. Posiada on też zwykle lampki zasilane z dynama, komplet błotników, 
+			osłonę na łańcuch, nóżkę, bagażnik tylny, czasem osłonę tylnego koła czy koszyk.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('./sw.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
